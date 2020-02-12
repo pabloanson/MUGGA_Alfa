@@ -77,14 +77,14 @@ public class MenuPlaylist extends JFrame {
 	private JTextField txtNombre;
 	private JLabel lblNombre;
 	private JButton btnVolver;
+	private final JLabel gif = new JLabel("");
 
 	public MenuPlaylist() {
 
 		setType(Type.POPUP);
 		setTitle("Menu Principal (Playlist)");
 		setBackground(Color.WHITE);
-		setIconImage(Toolkit.getDefaultToolkit()
-				.getImage("D:\\programas\\java-2019-09\\eclipse\\pr\\imagen\\JPEG_Color_Azul_redimensionada.jpg"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(MenuPlaylist.class.getResource("/imagen/JPEG_Color_Azul_redimensionada.jpg")));
 		getContentPane().setForeground(UIManager.getColor("Menu.selectionBackground"));
 		this.getContentPane().setBackground(Color.BLACK);
 		getContentPane().setLayout(null);
@@ -94,7 +94,7 @@ public class MenuPlaylist extends JFrame {
 		getContentPane().setLayout(null);
 
 		panelUsrPlaylist = new JPanel();
-		panelUsrPlaylist.setBounds(16, 86, 134, 433);
+		panelUsrPlaylist.setBounds(10, 182, 140, 337);
 		getContentPane().add(panelUsrPlaylist);
 		panelUsrPlaylist.setLayout(null);
 
@@ -108,33 +108,33 @@ public class MenuPlaylist extends JFrame {
 				controlador.LogOutPlaylist();
 			}
 		});
-		btnLogOut.setBounds(26, 87, 83, 29);
+		btnLogOut.setBounds(30, 89, 83, 29);
 		panelUsrPlaylist.add(btnLogOut);
 
 		lblIconoUser = new JLabel("");
-		lblIconoUser.setIcon(new ImageIcon("/Users/ruben/Downloads/icono-usr.png"));
-		lblIconoUser.setBounds(34, 6, 69, 69);
+		lblIconoUser.setIcon(new ImageIcon(MenuPlaylist.class.getResource("/imagen/man-icon.jpg")));
+		lblIconoUser.setBounds(34, 10, 69, 69);
 		panelUsrPlaylist.add(lblIconoUser);
+		
+				list = new JList();
+				list.setBounds(8, 128, 120, 161);
+				panelUsrPlaylist.add(list);
+				list.setModel(new AbstractListModel() {
+					String[] values = new String[] { "Playlist1", "Playlist2", "Playlist3", "Playlist4", "Playlist5",
+							"Playlist6", "Playlist7", "Playlist8", "Playlist9", "Playlist10" };
+
+					public int getSize() {
+						return values.length;
+					}
+
+					public Object getElementAt(int index) {
+						return values[index];
+					}
+				});
 
 		scrollPlaylist = new JScrollPane();
-		scrollPlaylist.setBounds(6, 199, 122, 163);
+		scrollPlaylist.setBounds(6, 128, 122, 163);
 		panelUsrPlaylist.add(scrollPlaylist);
-
-		list = new JList();
-		list.setModel(new AbstractListModel() {
-			String[] values = new String[] { "Playlist1", "Playlist2", "Playlist3", "Playlist4", "Playlist5",
-					"Playlist6", "Playlist7", "Playlist8", "Playlist9", "Playlist10" };
-
-			public int getSize() {
-				return values.length;
-			}
-
-			public Object getElementAt(int index) {
-				return values[index];
-			}
-		});
-
-		scrollPlaylist.setViewportView(list);
 
 		panelPrincipal = new JPanel();
 		panelPrincipal.setBounds(162, 86, 688, 433);
@@ -182,7 +182,7 @@ public class MenuPlaylist extends JFrame {
 		panelPrincipal.add(btnVolver);
 
 		panelRecomendados = new JPanel();
-		panelRecomendados.setBounds(876, 227, 143, 292);
+		panelRecomendados.setBounds(860, 227, 143, 292);
 		getContentPane().add(panelRecomendados);
 		panelRecomendados.setLayout(null);
 
@@ -311,6 +311,9 @@ public class MenuPlaylist extends JFrame {
 		btnBuscar = new JButton("Buscar");
 		btnBuscar.setBounds(793, 21, 78, 29);
 		getContentPane().add(btnBuscar);
+		gif.setBounds(-23, -5, 200, 112);
+		getContentPane().add(gif);
+		gif.setIcon(new ImageIcon(MenuPlaylist.class.getResource("/imagen/gifRedimendionado.gif")));
 
 		setBounds(100, 100, 1036, 602);
 		setLocationRelativeTo(null);
@@ -332,5 +335,4 @@ public class MenuPlaylist extends JFrame {
 	public void setModelo(Modelo modelo) {
 		this.modelo = modelo;
 	}
-
 }

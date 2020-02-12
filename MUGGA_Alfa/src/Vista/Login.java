@@ -12,6 +12,8 @@ import Modelo.Modelo;
 
 import java.awt.Color;
 import java.awt.Toolkit;
+
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.SwingConstants;
 import java.awt.event.ActionListener;
@@ -26,7 +28,6 @@ public class Login extends JFrame {
 	private JLabel lblUsuario;
 	private JLabel lblPassword;
 	private JLabel lblLogin;
-	private JLabel gif;
 	private JButton btnNoTienesCuenta;
 	private JButton btnAdmin;
 
@@ -35,7 +36,7 @@ public class Login extends JFrame {
 		setType(Type.POPUP);
 		setTitle("Mugga (Login)");
 		setBackground(Color.WHITE);
-		setIconImage(Toolkit.getDefaultToolkit().getImage(""));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Login.class.getResource("/imagen/JPEG_Color_Azul_redimensionada.jpg")));
 		getContentPane().setForeground(UIManager.getColor("Menu.selectionBackground"));
 		this.getContentPane().setBackground(Color.BLACK);
 
@@ -67,10 +68,10 @@ public class Login extends JFrame {
 		getContentPane().add(txtPassword);
 		txtPassword.setColumns(10);
 
-		gif = new JLabel("");
-		gif.setBounds(448, 113, 155, 112);
+		JLabel gif = new JLabel("");
+		gif.setBounds(-23, -5, 200, 112);
 		getContentPane().add(gif);
-//		gif.setIcon(new ImageIcon(getClass().getResource("/imagen/picasion.com_82021399a5189f84d53f55f8b86fa6a0.gif")).getImage());
+		gif.setIcon(new ImageIcon(Login.class.getResource("/imagen/gifRedimendionado.gif")));
 
 		txtUsuario = new JTextField();
 		txtUsuario.setFont(new Font("Tahoma", Font.PLAIN, 15));

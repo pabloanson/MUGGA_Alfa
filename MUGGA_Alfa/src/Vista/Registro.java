@@ -45,8 +45,7 @@ public class Registro extends JFrame {
 		setType(Type.POPUP);
 		setTitle("Mugga (Registro)");
 		setBackground(Color.WHITE);
-		setIconImage(Toolkit.getDefaultToolkit()
-				.getImage("D:\\programas\\java-2019-09\\eclipse\\pr\\imagen\\JPEG_Color_Azul_redimensionada.jpg"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Registro.class.getResource("/imagen/JPEG_Color_Azul_redimensionada.jpg")));
 		getContentPane().setForeground(UIManager.getColor("Menu.selectionBackground"));
 		this.getContentPane().setBackground(Color.BLACK);
 
@@ -103,8 +102,7 @@ public class Registro extends JFrame {
 		JLabel gif = new JLabel("");
 		gif.setBounds(-23, -5, 200, 112);
 		getContentPane().add(gif);
-		gif.setIcon(new ImageIcon(
-				"D:\\programas\\java-2019-09\\eclipse\\pr\\imagen\\picasion.com_82021399a5189f84d53f55f8b86fa6a0.gif"));
+		gif.setIcon(new ImageIcon(Registro.class.getResource("/imagen/gifRedimendionado.gif")));
 
 		lblContrasena = new JLabel("Contrase\u00F1a:");
 		lblContrasena.setFont(new Font("Tahoma", Font.PLAIN, 15));
@@ -150,7 +148,7 @@ public class Registro extends JFrame {
 			}
 		});
 		btnVolver.setBounds(10, 499, 100, 56);
-		btnVolver.setIcon(new ImageIcon("D:\\\\programas\\\\java-2019-09\\\\eclipse\\\\pr\\\\imagen\\\\volver.png"));
+		btnVolver.setIcon(new ImageIcon(Registro.class.getResource("/imagen/volver.png")));
 		getContentPane().add(btnVolver);
 
 		setBounds(100, 100, 1036, 602);

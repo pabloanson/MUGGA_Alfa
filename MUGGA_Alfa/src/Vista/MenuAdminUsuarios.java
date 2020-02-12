@@ -40,14 +40,14 @@ public class MenuAdminUsuarios extends JFrame {
 	private JLabel lblAdministrador;
 	private JLabel gif;
 	private JPanel panel;
+	private JButton btnGestinDeUsuarios;
 
 	public MenuAdminUsuarios() {
 
 		setType(Type.POPUP);
 		setTitle("Mugga (Admin)");
 		setBackground(Color.WHITE);
-		setIconImage(Toolkit.getDefaultToolkit()
-				.getImage("D:\\programas\\java-2019-09\\eclipse\\pr\\imagen\\JPEG_Color_Azul_redimensionada.jpg"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(MenuAdminUsuarios.class.getResource("/imagen/JPEG_Color_Azul_redimensionada.jpg")));
 		getContentPane().setForeground(UIManager.getColor("Menu.selectionBackground"));
 		this.getContentPane().setBackground(Color.BLACK);
 		getContentPane().setLayout(null);
@@ -83,12 +83,16 @@ public class MenuAdminUsuarios extends JFrame {
 		btnGestinDeMsica.setFont(new Font("Tahoma", Font.PLAIN, 22));
 		btnGestinDeMsica.setBounds(10, 150, 238, 96);
 		panel.add(btnGestinDeMsica);
+		
+		btnGestinDeUsuarios = new JButton("Gesti\u00F3n de Usuarios");
+		btnGestinDeUsuarios.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		btnGestinDeUsuarios.setBounds(10, 290, 238, 96);
+		panel.add(btnGestinDeUsuarios);
 
 		gif = new JLabel("");
 		gif.setBounds(-23, -5, 200, 99);
 		getContentPane().add(gif);
-		gif.setIcon(new ImageIcon(
-				"D:\\programas\\java-2019-09\\eclipse\\pr\\imagen\\picasion.com_82021399a5189f84d53f55f8b86fa6a0.gif"));
+		gif.setIcon(new ImageIcon(MenuAdminUsuarios.class.getResource("/imagen/gifRedimendionado.gif")));
 
 		panelUsuarios = new JPanel();
 		panelUsuarios.setBounds(340, 48, 660, 487);

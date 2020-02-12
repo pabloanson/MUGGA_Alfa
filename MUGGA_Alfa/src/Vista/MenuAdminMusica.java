@@ -40,14 +40,14 @@ public class MenuAdminMusica extends JFrame {
 	private JLabel lblAddMusica;
 	private JPanel panel;
 	private JLabel gif;
+	private JButton btnGestinDeMusica;
 
 	public MenuAdminMusica() {
 
 		setType(Type.POPUP);
 		setTitle("Mugga (Admin)");
 		setBackground(Color.WHITE);
-		setIconImage(Toolkit.getDefaultToolkit()
-				.getImage("D:\\programas\\java-2019-09\\eclipse\\pr\\imagen\\JPEG_Color_Azul_redimensionada.jpg"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(MenuAdminMusica.class.getResource("/imagen/JPEG_Color_Azul_redimensionada.jpg")));
 		getContentPane().setForeground(UIManager.getColor("Menu.selectionBackground"));
 		this.getContentPane().setBackground(Color.BLACK);
 		getContentPane().setLayout(null);
@@ -74,6 +74,11 @@ public class MenuAdminMusica extends JFrame {
 
 		btnLogOut.setBounds(78, 72, 104, 42);
 		panel.add(btnLogOut);
+		
+		btnGestinDeMusica = new JButton("Gesti\u00F3n de Musica");
+		btnGestinDeMusica.setBounds(10, 139, 238, 96);
+		panel.add(btnGestinDeMusica);
+		btnGestinDeMusica.setFont(new Font("Tahoma", Font.PLAIN, 22));
 
 		lblAdministrador = new JLabel("Administrador");
 		lblAdministrador.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -81,7 +86,7 @@ public class MenuAdminMusica extends JFrame {
 		panel.add(lblAdministrador);
 
 		btnGestinDeUsuarios.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		btnGestinDeUsuarios.setBounds(10, 145, 238, 96);
+		btnGestinDeUsuarios.setBounds(10, 284, 238, 96);
 		panel.add(btnGestinDeUsuarios);
 
 		btnGestinDeMsica.setFont(new Font("Tahoma", Font.PLAIN, 22));
@@ -91,8 +96,7 @@ public class MenuAdminMusica extends JFrame {
 		gif = new JLabel("");
 		gif.setBounds(-23, -5, 200, 99);
 		getContentPane().add(gif);
-		gif.setIcon(new ImageIcon(
-				"D:\\programas\\java-2019-09\\eclipse\\pr\\imagen\\picasion.com_82021399a5189f84d53f55f8b86fa6a0.gif"));
+		gif.setIcon(new ImageIcon(MenuAdminMusica.class.getResource("/imagen/gifRedimendionado.gif")));
 
 		panelListaMusica = new JPanel();
 		panelListaMusica.setBounds(343, 48, 657, 304);

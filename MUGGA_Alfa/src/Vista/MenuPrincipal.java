@@ -72,24 +72,24 @@ public class MenuPrincipal extends JFrame {
 	private JButton btnNext;
 	private JButton btnRepeat;
 	private JButton btnLike;
+	private final JLabel gif = new JLabel("");
 
 	public MenuPrincipal() {
 
 		setType(Type.POPUP);
 		setTitle("Menu Principal");
 		setBackground(Color.WHITE);
-		setIconImage(Toolkit.getDefaultToolkit()
-				.getImage("D:\\programas\\java-2019-09\\eclipse\\pr\\imagen\\JPEG_Color_Azul_redimensionada.jpg"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(MenuPrincipal.class.getResource("/imagen/JPEG_Color_Azul_redimensionada.jpg")));
 		getContentPane().setForeground(UIManager.getColor("Menu.selectionBackground"));
 		this.getContentPane().setBackground(Color.BLACK);
 		getContentPane().setLayout(null);
-//		this.setIconImage(new ImageIcon(getClass().getResource("/imagen/...")).getImage());
+
 
 		getContentPane().setFont(new Font("Tahoma", Font.PLAIN, 15));
 		getContentPane().setLayout(null);
 
 		panelUsrPlaylist = new JPanel();
-		panelUsrPlaylist.setBounds(16, 86, 134, 433);
+		panelUsrPlaylist.setBounds(16, 110, 134, 409);
 		getContentPane().add(panelUsrPlaylist);
 		panelUsrPlaylist.setLayout(null);
 
@@ -99,7 +99,7 @@ public class MenuPrincipal extends JFrame {
 				controlador.crearPlaylist();
 			}
 		});
-		btnCrearPlaylist.setBounds(26, 398, 77, 29);
+		btnCrearPlaylist.setBounds(20, 372, 77, 29);
 		panelUsrPlaylist.add(btnCrearPlaylist);
 
 		btnLogOut = new JButton("Log out");
@@ -108,12 +108,12 @@ public class MenuPrincipal extends JFrame {
 				controlador.LogOutUsuario();
 			}
 		});
-		btnLogOut.setBounds(26, 87, 83, 29);
+		btnLogOut.setBounds(20, 160, 83, 29);
 		panelUsrPlaylist.add(btnLogOut);
 
 		lblIconoUser = new JLabel("");
-		lblIconoUser.setIcon(new ImageIcon("/Users/ruben/Downloads/icono-usr.png"));
-		lblIconoUser.setBounds(34, 6, 69, 69);
+		lblIconoUser.setIcon(new ImageIcon(MenuPrincipal.class.getResource("/imagen/man-icon.jpg")));
+		lblIconoUser.setBounds(26, 51, 77, 79);
 		panelUsrPlaylist.add(lblIconoUser);
 
 		scrollPlaylist = new JScrollPane();
@@ -137,7 +137,7 @@ public class MenuPrincipal extends JFrame {
 		scrollPlaylist.setViewportView(list);
 
 		panelPrincipal = new JPanel();
-		panelPrincipal.setBounds(162, 86, 688, 433);
+		panelPrincipal.setBounds(162, 110, 688, 409);
 		getContentPane().add(panelPrincipal);
 		panelPrincipal.setLayout(null);
 
@@ -145,7 +145,7 @@ public class MenuPrincipal extends JFrame {
 		separadorMusica.setBounds(0, 40, 688, 12);
 		panelPrincipal.add(separadorMusica);
 
-		lblTitulo = new JLabel("Título");
+		lblTitulo = new JLabel("TÃ­tulo");
 		lblTitulo.setBounds(16, 12, 61, 16);
 		panelPrincipal.add(lblTitulo);
 
@@ -153,16 +153,16 @@ public class MenuPrincipal extends JFrame {
 		lblArtista.setBounds(218, 12, 61, 16);
 		panelPrincipal.add(lblArtista);
 
-		lblAlbum = new JLabel("Álbum");
+		lblAlbum = new JLabel("Ã�lbum");
 		lblAlbum.setBounds(317, 12, 61, 16);
 		panelPrincipal.add(lblAlbum);
 
-		lblDuracion = new JLabel("Duración");
+		lblDuracion = new JLabel("DuraciÃ³n");
 		lblDuracion.setBounds(441, 12, 61, 16);
 		panelPrincipal.add(lblDuracion);
 
 		comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] { "Relevancia", "Duración", "Género" }));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] { "Relevancia", "DuraciÃ³n", "GÃ©nero" }));
 		comboBox.setBounds(546, 8, 136, 27);
 		panelPrincipal.add(comboBox);
 
@@ -204,27 +204,27 @@ public class MenuPrincipal extends JFrame {
 		icn5.setBounds(10, 166, 20, 20);
 		panelRecomendados.add(icn5);
 
-		lblArtistaTtulo = new JLabel("Artista - Título");
+		lblArtistaTtulo = new JLabel("Artista - TÃ­tulo");
 		lblArtistaTtulo.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
 		lblArtistaTtulo.setBounds(39, 45, 79, 16);
 		panelRecomendados.add(lblArtistaTtulo);
 
-		lblArtistaTitulo2 = new JLabel("Artista - Título");
+		lblArtistaTitulo2 = new JLabel("Artista - TÃ­tulo");
 		lblArtistaTitulo2.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
 		lblArtistaTitulo2.setBounds(39, 74, 79, 16);
 		panelRecomendados.add(lblArtistaTitulo2);
 
-		lblArtistaTitulo3 = new JLabel("Artista - Título");
+		lblArtistaTitulo3 = new JLabel("Artista - TÃ­tulo");
 		lblArtistaTitulo3.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
 		lblArtistaTitulo3.setBounds(39, 106, 79, 16);
 		panelRecomendados.add(lblArtistaTitulo3);
 
-		lblArtistaTitulo4 = new JLabel("Artista - Título");
+		lblArtistaTitulo4 = new JLabel("Artista - TÃ­tulo");
 		lblArtistaTitulo4.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
 		lblArtistaTitulo4.setBounds(39, 138, 79, 16);
 		panelRecomendados.add(lblArtistaTitulo4);
 
-		lblArtistaTitulo5 = new JLabel("Artista - Título");
+		lblArtistaTitulo5 = new JLabel("Artista - TÃ­tulo");
 		lblArtistaTitulo5.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
 		lblArtistaTitulo5.setBounds(39, 170, 79, 16);
 		panelRecomendados.add(lblArtistaTitulo5);
@@ -249,7 +249,7 @@ public class MenuPrincipal extends JFrame {
 		getContentPane().add(panelReproductor);
 		panelReproductor.setLayout(null);
 
-		btnPlay = new JButton(new ImageIcon("/imagen/playbtn.jpg"));
+		btnPlay = new JButton(new ImageIcon(MenuPrincipal.class.getResource("/imagen/playbtn.jpg")));
 		btnPlay.setBounds(300, 5, 20, 20);
 		panelReproductor.add(btnPlay);
 
@@ -278,7 +278,7 @@ public class MenuPrincipal extends JFrame {
 		getContentPane().add(panelMusicAct);
 		panelMusicAct.setLayout(null);
 
-		lblTtuloActual = new JLabel("Título");
+		lblTtuloActual = new JLabel("TÃ­tulo");
 		lblTtuloActual.setFont(new Font("Lucida Grande", Font.BOLD, 8));
 		lblTtuloActual.setBounds(34, 0, 31, 16);
 		panelMusicAct.add(lblTtuloActual);
@@ -296,6 +296,9 @@ public class MenuPrincipal extends JFrame {
 		btnBuscar = new JButton("Buscar");
 		btnBuscar.setBounds(793, 21, 78, 29);
 		getContentPane().add(btnBuscar);
+		gif.setIcon(new ImageIcon(MenuPrincipal.class.getResource("/imagen/gifRedimendionado.gif")));
+		gif.setBounds(-23, -5, 200, 112);;
+		getContentPane().add(gif);
 
 		setBounds(100, 100, 1036, 602);
 		setLocationRelativeTo(null);
@@ -317,5 +320,4 @@ public class MenuPrincipal extends JFrame {
 	public void setModelo(Modelo modelo) {
 		this.modelo = modelo;
 	}
-
 }
