@@ -28,15 +28,15 @@ public class Registro extends JFrame {
 	private JTextField textField;
 	private JTextField txtUsuario;
 	private JPasswordField pswRepetir;
-	private JPasswordField pswContraseña;
+	private JPasswordField pswContrasena;
 	private JButton btnRegistrarse;
 	private JButton btnVolver;
 	private JLabel lblNombre;
 	private JLabel lblApellidos;
 	private JLabel lblMail;
 	private JLabel lblUsuario;
-	private JLabel lblContraseña;
-	private JLabel lblRepitaContraseña;
+	private JLabel lblContrasena;
+	private JLabel lblRepitaContrasena;
 	private JLabel lblNewLabel;
 	private JLabel lblRegistro;
 
@@ -106,17 +106,17 @@ public class Registro extends JFrame {
 		gif.setIcon(new ImageIcon(
 				"D:\\programas\\java-2019-09\\eclipse\\pr\\imagen\\picasion.com_82021399a5189f84d53f55f8b86fa6a0.gif"));
 
-		lblContraseña = new JLabel("Contrase\u00F1a:");
-		lblContraseña.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblContraseña.setForeground(UIManager.getColor("Menu.selectionBackground"));
-		lblContraseña.setBounds(555, 291, 100, 25);
-		getContentPane().add(lblContraseña);
+		lblContrasena = new JLabel("Contrase\u00F1a:");
+		lblContrasena.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblContrasena.setForeground(UIManager.getColor("Menu.selectionBackground"));
+		lblContrasena.setBounds(555, 291, 100, 25);
+		getContentPane().add(lblContrasena);
 
-		lblRepitaContraseña = new JLabel("Repita \r");
-		lblRepitaContraseña.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblRepitaContraseña.setForeground(UIManager.getColor("Menu.selectionBackground"));
-		lblRepitaContraseña.setBounds(555, 320, 100, 25);
-		getContentPane().add(lblRepitaContraseña);
+		lblRepitaContrasena = new JLabel("Repita \r");
+		lblRepitaContrasena.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblRepitaContrasena.setForeground(UIManager.getColor("Menu.selectionBackground"));
+		lblRepitaContrasena.setBounds(555, 320, 100, 25);
+		getContentPane().add(lblRepitaContrasena);
 
 		lblNewLabel = new JLabel("Contrase\u00F1a:");
 		lblNewLabel.setForeground(UIManager.getColor("Menu.selectionBackground"));
@@ -129,9 +129,9 @@ public class Registro extends JFrame {
 		getContentPane().add(txtUsuario);
 		txtUsuario.setColumns(10);
 
-		pswContraseña = new JPasswordField();
-		pswContraseña.setBounds(645, 291, 150, 25);
-		getContentPane().add(pswContraseña);
+		pswContrasena = new JPasswordField();
+		pswContrasena.setBounds(645, 291, 150, 25);
+		getContentPane().add(pswContrasena);
 
 		pswRepetir = new JPasswordField();
 		pswRepetir.setBounds(645, 326, 150, 25);
