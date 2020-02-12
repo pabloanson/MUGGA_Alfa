@@ -16,104 +16,169 @@ public class Controlador {
 	private MenuAdminMusica vistaAdminMusica;
 	private MenuPrincipal vistaPrincipal;
 	private MenuPlaylist vistaPlaylist;
-	
+
 	public Controlador() {
-		
+
 	}
 
 	public void LogOut() {
 		this.vistaAdminMusica.dispose();
-		;
-		this.vistaLogin.setVisible(true);
+		if (vistaLogin != null) {
+			this.vistaLogin.setVisible(true);
+		} else {
+			this.vistaLogin = new Login();
+			this.vistaLogin.setControlador(this);
+			this.vistaLogin.setModelo(modelo);
+			this.vistaLogin.setVisible(true);
+		}
 	}
 
 	public void LogOutAdmin() {
 		this.vistaAdminUsuario.dispose();
-		;
-		this.vistaLogin.setVisible(true);
+		if (vistaLogin != null) {
+			this.vistaLogin.setVisible(true);
+		} else {
+			this.vistaLogin = new Login();
+			this.vistaLogin.setControlador(this);
+			this.vistaLogin.setModelo(modelo);
+			this.vistaLogin.setVisible(true);
+		}
 	}
 
-	public void gestionUsuarios() {
+	public void GMusica() {
 		this.vistaAdminMusica.dispose();
-		;
-		this.vistaAdminUsuario.setVisible(true);
-
+		if (vistaAdminUsuario != null) {
+			this.vistaAdminUsuario.setVisible(true);
+		} else {
+			this.vistaAdminUsuario = new MenuAdminUsuarios();
+			this.vistaAdminUsuario.setControlador(this);
+			this.vistaAdminUsuario.setModelo(modelo);
+			this.vistaAdminUsuario.setVisible(true);
+		}
 	}
 
-	public void gestionMusica() {
+	public void GUsuarios() {
 		this.vistaAdminUsuario.dispose();
-		;
-		this.vistaAdminMusica.setVisible(true);
+		if (vistaAdminMusica != null) {
+			this.vistaAdminMusica.setVisible(true);
+		} else {
+			this.vistaAdminMusica = new MenuAdminMusica();
+			this.vistaAdminMusica.setControlador(this);
+			this.vistaAdminMusica.setModelo(modelo);
+			this.vistaAdminMusica.setVisible(true);
+		}
 	}
 
 	// Login - Principal
 	public void login() {
 		this.vistaLogin.dispose();
-		;
-		this.vistaPrincipal.setVisible(true);
+		if (vistaPrincipal != null) {
+			this.vistaPrincipal.setVisible(true);
+		} else {
+			this.vistaPrincipal = new MenuPrincipal();
+			this.vistaPrincipal.setControlador(this);
+			this.vistaPrincipal.setModelo(modelo);
+			this.vistaPrincipal.setVisible(true);
+		}
 	}
 
 	// Login - Registro
 	public void registro() {
 		this.vistaLogin.dispose();
-		;
-		this.vistaRegistro.setVisible(true);
+		if (vistaRegistro != null) {
+			this.vistaRegistro.setVisible(true);
+		} else {
+			this.vistaRegistro = new Registro();
+			this.vistaRegistro.setControlador(this);
+			this.vistaRegistro.setModelo(modelo);
+			this.vistaRegistro.setVisible(true);
+		}
 	}
 
 	// Login - Admin
 	public void admin() {
 		this.vistaLogin.dispose();
-		;
-		this.vistaAdminMusica.setVisible(true);
+		if (vistaAdminUsuario != null) {
+			this.vistaAdminUsuario.setVisible(true);
+		} else {
+			this.vistaAdminUsuario = new MenuAdminUsuarios();
+			this.vistaAdminUsuario.setControlador(this);
+			this.vistaAdminUsuario.setModelo(modelo);
+			this.vistaAdminUsuario.setVisible(true);
+		}
 	}
 
 	// Registro - Vuelta al login
 	public void volverLogin() {
 		this.vistaRegistro.dispose();
-		;
-		this.vistaLogin.setVisible(true);
+		if (vistaLogin != null) {
+			this.vistaLogin.setVisible(true);
+		} else {
+			this.vistaLogin = new Login();
+			this.vistaLogin.setControlador(this);
+			this.vistaLogin.setModelo(modelo);
+			this.vistaLogin.setVisible(true);
+		}
 	}
 
 	// Principal - Playlist
 	public void crearPlaylist() {
 		this.vistaPrincipal.dispose();
-		;
-		this.vistaPlaylist.setVisible(true);
+		if (vistaPlaylist != null) {
+			this.vistaPlaylist.setVisible(true);
+		} else {
+			this.vistaPlaylist = new MenuPlaylist();
+			this.vistaPlaylist.setControlador(this);
+			this.vistaPlaylist.setModelo(modelo);
+			this.vistaPlaylist.setVisible(true);
+		}
+	}
+
+	// Principal - Login
+	public void LogOutUsuario() {
+		this.vistaPrincipal.dispose();
+		if (vistaLogin != null) {
+			this.vistaLogin.setVisible(true);
+		} else {
+			this.vistaLogin = new Login();
+			this.vistaLogin.setControlador(this);
+			this.vistaLogin.setModelo(modelo);
+			this.vistaLogin.setVisible(true);
+		}
 	}
 
 	// Playlist - Principal
 	public void volverPrincipal() {
 		this.vistaPlaylist.dispose();
-		;
-		this.vistaPrincipal.setVisible(true);
+		if (vistaPrincipal != null) {
+			this.vistaPrincipal.setVisible(true);
+		} else {
+			this.vistaPrincipal = new MenuPrincipal();
+			this.vistaPrincipal.setControlador(this);
+			this.vistaPrincipal.setModelo(modelo);
+			this.vistaPrincipal.setVisible(true);
+		}
+	}
+
+	// Playlist - Login
+	public void LogOutPlaylist() {
+		this.vistaPlaylist.dispose();
+		if (vistaLogin != null) {
+			this.vistaLogin.setVisible(true);
+		} else {
+			this.vistaLogin = new Login();
+			this.vistaLogin.setControlador(this);
+			this.vistaLogin.setModelo(modelo);
+			this.vistaLogin.setVisible(true);
+		}
 	}
 
 	public void setModelo(Modelo modelo) {
 		this.modelo = modelo;
 	}
 
-	public void setVistaRegistro(Registro vistaRegistro) {
-		this.vistaRegistro = vistaRegistro;
-	}
-
-	public void setVistaAdminUsuario(MenuAdminUsuarios vistaAdminUsuario) {
-		this.vistaAdminUsuario = vistaAdminUsuario;
-	}
-
-	public void setVistaAdminMusica(MenuAdminMusica vistaAdminMusica) {
-		this.vistaAdminMusica = vistaAdminMusica;
-	}
-
 	public void setVistaLogin(Login vistaLogin) {
 		this.vistaLogin = vistaLogin;
-	}
-
-	public void setVistaPrincipal(MenuPrincipal vistaPrincipal) {
-		this.vistaPrincipal = vistaPrincipal;
-	}
-
-	public void setVistaPlaylist(MenuPlaylist vistaPlaylist) {
-		this.vistaPlaylist = vistaPlaylist;
 	}
 
 }

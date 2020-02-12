@@ -12,32 +12,11 @@ public class Main {
 		Modelo modelo = new Modelo();
 		Controlador controlador = new Controlador();
 		Login vistaLogin = new Login();
-		Registro vistaRegistro = new Registro();
-		MenuPrincipal vistaPrincipal = new MenuPrincipal();
-		MenuAdminMusica vistaAdminMusica = new MenuAdminMusica();
-		MenuAdminUsuarios vistaAdminUsuarios = new MenuAdminUsuarios();
-		MenuPlaylist vistaPlaylist = new MenuPlaylist();
 
-		modelo.setVistaAdminMusica(vistaAdminMusica);
-		modelo.setVistaAdminUsuario(vistaAdminUsuarios);
 		modelo.setVistaLogin(vistaLogin);
-		modelo.setVistaPlaylist(vistaPlaylist);
-		modelo.setVistaPrincipal(vistaPrincipal);
-		modelo.setVistaRegistro(vistaRegistro);
 
 		vistaLogin.setControlador(controlador);
-		vistaRegistro.setControlador(controlador);
-		vistaPrincipal.setControlador(controlador);
-		vistaAdminMusica.setControlador(controlador);
-		vistaAdminUsuarios.setControlador(controlador);
-		vistaPlaylist.setControlador(controlador);
-
-		controlador.setVistaAdminMusica(vistaAdminMusica);
-		controlador.setVistaAdminUsuario(vistaAdminUsuarios);
 		controlador.setVistaLogin(vistaLogin);
-		controlador.setVistaPlaylist(vistaPlaylist);
-		controlador.setVistaPrincipal(vistaPrincipal);
-		controlador.setVistaRegistro(vistaRegistro);
 
 		vistaLogin.setVisible(true);
 

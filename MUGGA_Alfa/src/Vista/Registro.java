@@ -154,6 +154,7 @@ public class Registro extends JFrame {
 		getContentPane().add(btnVolver);
 
 		setBounds(100, 100, 1036, 602);
+		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 

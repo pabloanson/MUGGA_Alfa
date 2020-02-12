@@ -103,6 +103,11 @@ public class MenuPlaylist extends JFrame {
 		panelUsrPlaylist.add(btnCrearPlaylist);
 
 		btnLogOut = new JButton("Log out");
+		btnLogOut.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.LogOutPlaylist();
+			}
+		});
 		btnLogOut.setBounds(26, 87, 83, 29);
 		panelUsrPlaylist.add(btnLogOut);
 
@@ -308,6 +313,7 @@ public class MenuPlaylist extends JFrame {
 		getContentPane().add(btnBuscar);
 
 		setBounds(100, 100, 1036, 602);
+		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 

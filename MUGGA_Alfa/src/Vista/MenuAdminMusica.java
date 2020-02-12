@@ -24,6 +24,7 @@ import Modelo.Modelo;
 public class MenuAdminMusica extends JFrame {
 	private Controlador controlador;
 	private Modelo modelo;
+
 	private JButton btnGestinDeUsuarios;
 	private JButton btnLogOut;
 	private JButton btnGestinDeMsica;
@@ -33,10 +34,10 @@ public class MenuAdminMusica extends JFrame {
 	private JPanel panelListaMusica;
 	private JSeparator separatorListaMusica;
 	private JScrollPane scrollPaneListaMusica;
-	private JPanel panelAñadirMusica;
-	private JSeparator separatorAñadir;
+	private JPanel panelAddMusica;
+	private JSeparator separadorAdd;
 	private JLabel lblAdministrador;
-	private JLabel lblAñadirMsica;
+	private JLabel lblAddMusica;
 	private JPanel panel;
 	private JLabel gif;
 
@@ -62,7 +63,7 @@ public class MenuAdminMusica extends JFrame {
 		btnGestinDeUsuarios = new JButton("Gesti\u00F3n de Usuarios");
 		btnGestinDeUsuarios.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				controlador.gestionUsuarios();
+				controlador.GUsuarios();
 			}
 		});
 
@@ -122,21 +123,22 @@ public class MenuAdminMusica extends JFrame {
 		scrollPaneListaMusica.setBounds(0, 55, 657, 249);
 		panelListaMusica.add(scrollPaneListaMusica);
 
-		panelAñadirMusica = new JPanel();
-		panelAñadirMusica.setBounds(343, 370, 657, 153);
-		getContentPane().add(panelAñadirMusica);
-		panelAñadirMusica.setLayout(null);
+		panelAddMusica = new JPanel();
+		panelAddMusica.setBounds(343, 370, 657, 153);
+		getContentPane().add(panelAddMusica);
+		panelAddMusica.setLayout(null);
 
-		lblAñadirMsica = new JLabel("A\u00F1adir M\u00FAsica");
-		lblAñadirMsica.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		lblAñadirMsica.setBounds(246, 10, 257, 36);
-		panelAñadirMusica.add(lblAñadirMsica);
+		lblAddMusica = new JLabel("A\u00F1adir M\u00FAsica");
+		lblAddMusica.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblAddMusica.setBounds(246, 10, 257, 36);
+		panelAddMusica.add(lblAddMusica);
 
-		separatorAñadir = new JSeparator();
-		separatorAñadir.setBounds(0, 48, 657, 9);
-		panelAñadirMusica.add(separatorAñadir);
+		separadorAdd = new JSeparator();
+		separadorAdd.setBounds(0, 48, 657, 9);
+		panelAddMusica.add(separadorAdd);
 
 		setBounds(100, 100, 1036, 602);
+		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 

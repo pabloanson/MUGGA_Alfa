@@ -28,6 +28,7 @@ import javax.swing.JTextField;
 public class MenuAdminUsuarios extends JFrame {
 	private Controlador controlador;
 	private Modelo modelo;
+
 	private JButton btnLogOut;
 	private JButton btnGestinDeMsica;
 	private JTextField txtUsuario;
@@ -62,7 +63,7 @@ public class MenuAdminUsuarios extends JFrame {
 		btnGestinDeMsica = new JButton("Gesti\u00F3n de M\u00FAsica");
 		btnGestinDeMsica.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				controlador.gestionMusica();
+				controlador.GMusica();
 			}
 		});
 
@@ -120,6 +121,7 @@ public class MenuAdminUsuarios extends JFrame {
 		panelUsuarios.add(scrollPaneUsuario);
 
 		setBounds(100, 100, 1036, 602);
+		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
